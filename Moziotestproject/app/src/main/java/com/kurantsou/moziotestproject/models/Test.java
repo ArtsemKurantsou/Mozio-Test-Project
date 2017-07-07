@@ -1,4 +1,4 @@
-package com.kurantsou.moziotestproject;
+package com.kurantsou.moziotestproject.models;
 
 /**
  * Created by artem on 07.07.2017.

@@ -9,6 +9,8 @@
     <string name="result_text">Your result is</string>
     <string name="back_text">Back to test</string>
     <string name="age_not_inputed">Input your age firs</string>
+    <string name="answers_stored">Answers stored</string>
+    <string name="answers_restored">Answers restored</string>
     <string-array name="answers">
         <item>Yes</item>
         <item>No</item>
