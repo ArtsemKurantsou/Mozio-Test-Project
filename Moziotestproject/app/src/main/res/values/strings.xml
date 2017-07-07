@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Mozio test project</string>
+    <string name="test_name">Todd’s Syndrome test</string>
+    <string name="migraines_text">Do you have migraines?</string>
+    <string name="age_text">How old are you?</string>
+    <string name="sex_text">What is your sex?</string>
+    <string name="drugs_text">Do you use hallucinogenic drugs?</string>
+    <string name="save_text">Save answers</string>
+    <string name="result_text">Your result is</string>
+    <string name="back_text">Back to test</string>
+    <string name="age_not_inputed">Input your age firs</string>
+    <string-array name="answers">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="sexes">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 </resources>
