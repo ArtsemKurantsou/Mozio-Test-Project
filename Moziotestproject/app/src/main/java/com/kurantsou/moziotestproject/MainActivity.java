@@ -8,8 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.kurantsou.moziotestproject.databinding.ActivityMainBinding;
-import com.kurantsou.moziotestproject.models.Test;
-import com.kurantsou.moziotestproject.models.TestAnswers;
+import com.kurantsou.models.ToddsSyndromeTest;
+import com.kurantsou.models.TestAnswers;
 import com.kurantsou.moziotestproject.repository.AnswersRpository;
 import com.kurantsou.moziotestproject.repository.LocalRepository;
 
@@ -60,10 +60,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (answers == null)
             return;
 
-        mBinding.sMigraines.setSelection(answers.getMigrainesAns() ? 0 : 1);
-        mBinding.sSex.setSelection(answers.getSexAns() ? 0 : 1);
-        mBinding.etAge.setText(String.valueOf(answers.getAgeAns()));
-        mBinding.sDrugs.setSelection(answers.getDrugsAns() ? 0 : 1);
+        mBinding.sMigraines.setSelection(answers.getHasMigraines() ? 0 : 1);
+        mBinding.sSex.setSelection(answers.getMale() ? 0 : 1);
+        mBinding.etAge.setText(String.valueOf(answers.getAge()));
+        mBinding.sDrugs.setSelection(answers.getUseDrugs() ? 0 : 1);
 
         Toast.makeText(this, R.string.answers_restored, Toast.LENGTH_LONG).show();
     }
@@ -86,11 +86,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 int age = Integer.parseInt(ageText);
                 TestAnswers answers = new TestAnswers();
-                answers.setMigrainesAns(mBinding.sMigraines.getSelectedItemPosition() == 0);
-                answers.setSexAns(mBinding.sSex.getSelectedItemPosition() == 0);
-                answers.setAgeAns(age);
-                answers.setDrugsAns(mBinding.sDrugs.getSelectedItemPosition() == 0);
-                mBinding.tvResultValue.setText(String.format("%d%s", Test.getResult(answers), "%", Locale.getDefault()));
+                answers.setHasMigraines(mBinding.sMigraines.getSelectedItemPosition() == 0);
+                answers.setMale(mBinding.sSex.getSelectedItemPosition() == 0);
+                answers.setAge(age);
+                answers.setUseDrugs(mBinding.sDrugs.getSelectedItemPosition() == 0);
+                mBinding.tvResultValue.setText(String.format("%d%s", ToddsSyndromeTest.getResult(answers), "%", Locale.getDefault()));
                 mBinding.viewFlipper.showNext();
                 storeValues(answers);
             }

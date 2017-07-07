@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
-import com.kurantsou.moziotestproject.models.TestAnswers;
+import com.kurantsou.models.TestAnswers;
 
 /**
  * Created by artem on 07.07.2017.

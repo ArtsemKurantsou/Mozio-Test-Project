@@ -1,10 +1,10 @@
-package com.kurantsou.moziotestproject.models;
+package com.kurantsou.models;
 
 /**
  * Created by artem on 07.07.2017.
  */
 
-public class Test {
+public class ToddsSyndromeTest {
     private static final int MAX_SCROE = 4; // max score that user can get
     private static final int AGE = 15; // age
 
@@ -17,13 +17,13 @@ public class Test {
     public static int getResult(TestAnswers answers) {
         int score = 0;
 
-        if (answers.getMigrainesAns())
+        if (answers.getHasMigraines())
             score++;
-        if (answers.getSexAns())
+        if (answers.getMale())
             score++;
-        if (answers.getAgeAns() <= AGE)
+        if (answers.getAge() <= AGE)
             score++;
-        if (answers.getDrugsAns())
+        if (answers.getUseDrugs())
             score++;
 
         return score * 100 / MAX_SCROE;
